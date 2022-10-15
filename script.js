@@ -13,7 +13,7 @@ function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
         return `You tied!`;
     }else {
-        if (playerSelection === "Rock" && computerSelection === "Scissors"){
+        if ((playerSelection === "Rock" && computerSelection === "Scissors") || (playerSelection === "Paper" && computerSelection === "Rock") || (playerSelection === "Scissors" && computerSelection === "Paper") ){
             return `You Won! ${playerSelection} beats ${computerSelection}`;
     
         } else {
@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection){
 
 
 
-const playerSelection = "Rock";
+const playerSelection = "Scissors";
 const computerSelection = getComputerChoice();
 
 console.log(playRound(playerSelection, computerSelection));
